@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}About - BFTB{% endblock %}
+
+{% block body %}
+
+<form method="POST" action="{{ url_for('admin') }}">
+    <div class="col-md-4 mx-auto">
+        <input name="password" type="password" class="form-control" required autofocus>
+    </div>
+    <div class="col-md-4 mx-auto text-center mt-3">
+        <input name="submit" type="submit" class="btn btn-primary mx-3" value="Login">
+    </div>
+</form>
+
+{% endblock %}

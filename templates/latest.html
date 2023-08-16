@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Latest - BFTB{% endblock%}
+{% block latestActive %}active{% endblock %}
+
+{% block body %}
+
+<div class="container-sm">
+    <div class="p-4 p-md-5 mb-4 rounded bg-body-secondary text-center" style="background-image:url('../static/img/thumbnails/{{post.thumbnail}}');width:auto;height:100%;">
+        <div class="col-lg-8 px-0 mx-auto py-3 px-3 rounded" style="background-color:#fbfbf2;">
+            <h1 class="display-4 fw-semibold mb-4">{{post.title}}</h1>
+            <p class="lead my-3 fw-medium">{{post.subtitle}}</p>
+            <p class="lead mt-3 mb-0 fw-normal"><a href="#" class="text-muted" id="author-name">Posted by {{post.author}} on {{post.month}} {{post.day}}, {{post.year}}</a></p>
+        </div>
+    </div>
+</div>
+
+<div class="container-sm pb-5 pt-3">
+    <div class="col-md-7 mx-auto">
+        <p>{% autoescape false %}{{post.body | replace("\n", "<br>")}}{% endautoescape %}
+            <br><br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi non arcu risus quis. Amet consectetur adipiscing elit pellentesque habitant morbi. Sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. Vel turpis nunc eget lorem dolor sed viverra ipsum. Lacus laoreet non curabitur gravida. Vel eros donec ac odio tempor orci dapibus ultrices in. Ipsum consequat nisl vel pretium lectus quam id leo in. Porta lorem mollis aliquam ut. Cursus vitae congue mauris rhoncus aenean vel. Tincidunt arcu non sodales neque sodales ut. Nisl condimentum id venenatis a condimentum vitae. Nec ultrices dui sapien eget mi. Dictumst quisque sagittis purus sit amet volutpat consequat mauris nunc. Nullam ac tortor vitae purus faucibus ornare. Libero id faucibus nisl tincidunt eget.
+<br><br>
+Curabitur vitae nunc sed velit. Non pulvinar neque laoreet suspendisse interdum. Id ornare arcu odio ut sem nulla pharetra. Ac auctor augue mauris augue neque gravida in. Aenean pharetra magna ac placerat vestibulum. Lectus arcu bibendum at varius vel pharetra vel. Sed turpis tincidunt id aliquet. Nunc sed augue lacus viverra vitae congue eu consequat ac. Vestibulum lorem sed risus ultricies tristique nulla. Porta lorem mollis aliquam ut. Dictum varius duis at consectetur lorem donec. Justo eget magna fermentum iaculis eu non diam phasellus. Erat pellentesque adipiscing commodo elit at imperdiet dui. Massa tincidunt nunc pulvinar sapien et. Eleifend quam adipiscing vitae proin. Ultricies mi eget mauris pharetra et ultrices neque ornare. Fringilla urna porttitor rhoncus dolor purus. Massa ultricies mi quis hendrerit dolor magna eget.
+<br><br>
+Aliquam ut porttitor leo a diam sollicitudin. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Consectetur a erat nam at. Sed egestas egestas fringilla phasellus. Magnis dis parturient montes nascetur ridiculus mus. Volutpat diam ut venenatis tellus. Facilisi morbi tempus iaculis urna. Quisque id diam vel quam elementum. Quam elementum pulvinar etiam non. Mi quis hendrerit dolor magna. Amet commodo nulla facilisi nullam vehicula ipsum a. Sit amet est placerat in egestas erat. Aliquam nulla facilisi cras fermentum odio eu feugiat. Porta lorem mollis aliquam ut porttitor. Facilisi cras fermentum odio eu. Enim eu turpis egestas pretium aenean. Risus pretium quam vulputate dignissim suspendisse in. Sed odio morbi quis commodo odio aenean. Phasellus faucibus scelerisque eleifend donec pretium vulputate. Sed nisi lacus sed viverra tellus in hac habitasse.
+<br><br>
+Diam vel quam elementum pulvinar etiam non quam. Eget nunc lobortis mattis aliquam faucibus purus in massa. Sed vulputate mi sit amet. Tellus mauris a diam maecenas sed enim. Euismod quis viverra nibh cras pulvinar mattis nunc. Enim neque volutpat ac tincidunt. Consectetur libero id faucibus nisl. Accumsan lacus vel facilisis volutpat est velit egestas dui. Proin sagittis nisl rhoncus mattis rhoncus. Pharetra massa massa ultricies mi quis hendrerit. Lorem donec massa sapien faucibus et molestie ac feugiat sed. Aliquam eleifend mi in nulla posuere. Vulputate dignissim suspendisse in est ante in. Risus quis varius quam quisque. Sagittis eu volutpat odio facilisis mauris sit. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada nunc.
+<br><br>
+Hendrerit dolor magna eget est. Mauris pharetra et ultrices neque. Scelerisque eleifend donec pretium vulputate. Ut sem viverra aliquet eget sit. Est velit egestas dui id ornare arcu odio. Scelerisque in dictum non consectetur a erat nam at lectus. Condimentum mattis pellentesque id nibh tortor id aliquet lectus. Parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Integer vitae justo eget magna. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Odio facilisis mauris sit amet massa vitae tortor condimentum. Auctor augue mauris augue neque gravida. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Ultrices sagittis orci a scelerisque purus semper. Cursus euismod quis viverra nibh cras pulvinar mattis nunc. Et ultrices neque ornare aenean euismod. Platea dictumst vestibulum rhoncus est pellentesque.
+    <br><br>- Rudra
+        </p>
+    </div>
+</div>
+
+{% endblock %}

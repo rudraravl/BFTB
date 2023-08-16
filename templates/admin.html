@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Admin - BFTB{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 class="h3 my-3 fw-normal text-center">{{ message }}</h1>
+    <div class="row">
+        <div class="col-md-4 mx-auto ">
+            <h1 class="h3 my-3 fw-normal text-center">New Blog</h1>
+            <form method="POST" action="{{ url_for('admin') }}" enctype="multipart/form-data">
+
+                <label for="blog-title" class="form-label">Title</label>
+                <input name="blog-title" type="text" class="form-control" id="blog-title" required autofocus>
+
+                <label for="blog-subtitle" class="form-label mt-3">Subtitle</label>
+                <input name="blog-subtitle" type="text" class="form-control" id="blog-subtitle" required>
+
+                <label for="blog-author" class="form-label mt-3">Author</label>
+                <input name="blog-author" type="text" class="form-control" id="blog-author" required>
+
+                <label for="blog-pic" class="form-label mt-3">Thumbnail</label>
+                <input type="file" id="blog-pic" name="blog-pic" class="form-control" required/>
+
+                <textarea name="blog-body" class="form-control my-3" id="blog-body" placeholder="Body" rows="10"></textarea>
+
+                <input name="submit-post" type="submit" class="btn btn-primary" value="Upload">
+
+            </form>
+        </div>
+        <div class="col-md-4 mx-auto">
+            <h1 class="h3 my-3 fw-normal text-center">New Thought</h1>
+            <form method="POST" action="{{ url_for('admin') }}" enctype="multipart/form-data">
+
+                <label for="thought" class="form-label">Thought</label>
+                <input name="thought" type="text" class="form-control" id="thought" required autofocus>
+
+                <label for="thought-author" class="form-label mt-3">Author</label>
+                <input name="thought-author" type="text" class="form-control" id="thought-author" required>
+
+                <label for="thought-source" class="form-label mt-3">Source</label>
+                <input name="thought-source" type="text" class="form-control mb-3" id="thought-source">
+
+                <input name="submit-thought" type="submit" class="btn btn-primary" value="Upload">
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - BFTB{% endblock %}
+
+{% block body %}
+<h1 class="h3 my-3 fw-normal text-center">{{message}}</h1>
+    <form method="POST" action="{{ url_for('contact') }}">
+        <div class="col-md-4 col-11 mx-auto">
+            <label for="name" class="form-label">Name</label>
+            <input name="name" type="text" class="form-control" id="name" required autofocus>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <label for="email" class="form-label mt-3">Email</label>
+            <input name="email" type="email" class="form-control" id="email" placeholder="If you want me to get back to you">
+            <div class="invalid-feedback">
+              Please enter a valid email.
+            </div>
+            <textarea name="query" class="form-control my-3" id="query" placeholder="Type your message here..." rows="5"></textarea>
+        </div>
+        <div class="col-md-4 mx-auto text-center mt-3">
+            <input name="submit" type="submit" class="btn btn-primary mx-3" value="Send">
+        </div>
+
+    </form>
+{% endblock %}

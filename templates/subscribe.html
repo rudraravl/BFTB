@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}About - BFTB{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h1 class="h3 my-3 fw-normal text-center">
+        {% if message == "subbed" %}
+        Thanks for subscribing!
+        {% elif message == "unsubbed" %}
+        You've been unsubbed. Sorry to see you go.
+        {% else %}
+        Subscribe or Unsubscribe here.
+        {% endif %}
+    </h1>
+    <form method="POST" action="{{ url_for('subscribe') }}" class="needs-validation">
+        <div class="col-md-4 mx-auto">
+            <label for="name" class="form-label">Name</label>
+            <input name="name" type="text" class="form-control" id="name" placeholder="Optional">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <label for="email" class="form-label mt-3">Email</label>
+            <input name="email" type="email" class="form-control" id="email" required>
+            <div class="invalid-feedback">
+              Please enter a valid email.
+            </div>
+        </div>
+        <div class="col-md-4 mx-auto text-center mt-3">
+            <input name="submit" type="submit" class="btn btn-primary mx-3" value="Subscribe">
+            <input name="submit" type="submit" class="btn btn-primary mx-3" value="Unsubscribe">
+        </div>
+
+    </form>
+</div>
+
+{% endblock %}
